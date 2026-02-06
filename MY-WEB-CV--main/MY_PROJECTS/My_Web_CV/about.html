@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me-Andre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+<body>
+    <section class="navsection">
+        <a href="home.html"> <img class="nameLogo nav-p" src="nameLogo.png" alt="André Cabrol"></a>
+        <nav role="navigation" style="transition: all; transform: translateY(0px) translateX(0px);" class="navigation">
+
+
+            <a href="Resume.html" class="nav-link nav-p" style="max-width: 1004px;">Resume</a>
+            <a href="about.html" class="nav-link nav-p middle-link" style="max-width: 1004px;">About</a>
+
+            <a href="projects.html" class="nav-link nav-p" style="max-width: 1004px;">Projects</a>
+
+
+
+        </nav>
+
+    </section>
+
+
+
+
+    <div class="hero-about">
+        <div class="about-hero-pt1">
+
+            <h1 class="h1-about">About Me!</h1>
+
+
+        </div>
+        <div class="about-content">
+
+            <img class="about-img" src="Aboutmepic.JPG" alt="About Andre photo">
+            <p class="about-text">
+            </p>
+
+        </div>
+    </div>
+    <div class="hero-about2"></div>
+    <div class="about-content2">
+
+
+        <p class="about-text2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta corrupti illo
+            tempora velit
+            praesentium
+            facilis facere consequatur minima vo
+        </p>
+        <img src="ontop-mtn.jpg" class="about-img2" alt="andre on top of a mountain">
+
+    </div>
+    </div>
+    <div class="space"></div>
+
+
+    <footer>
+        <div>
+            <hr>
+        </div>
+        <div class="ft-content">
+
+            <div class="ftbox">
+                <h3 class="ft-h3">Email</h3>
+                <p>Click Me! ↓</p>
+                <p id="copyMe"><b>andree.caabrol@gmail.com</b></p>
+                <span id="copyStatus" style="display:none; color: green; margin-left:8px;">
+                    Copied!
+                </span>
+
+            </div>
+            <div class="ftbox">
+                <h3 class="ft-h3">Github</h3>
+                <a href="" alt="Github link"><img src="github.png" class="ft-social" alt="github logo"></a>
+            </div>
+            <div class="ftbox">
+                <p class="rights">&copy; 2026 by Andre Cabrol. All rights reserved.</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+    <script>
+        const p = document.getElementById("copyMe");
+        const status = document.getElementById("copyStatus");
+
+        p.addEventListener("click", async () => {
+            const text = p.textContent;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                // show message
+                status.style.display = "inline";
+                status.textContent = "Copied!";
+                // hide after 2 seconds
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 2000);
+            } catch (err) {
+                console.error("Failed to copy:", err);
+                status.style.display = "inline";
+                status.style.color = "red";
+                status.textContent = "Copy failed";
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>

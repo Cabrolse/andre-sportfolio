@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre Cabrol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+<body>
+    <div class="coverpg">
+        <section class="navsection">
+            <a href="home.html"> <img class="nameLogo nav-p" src="nameLogo.png" alt="André Cabrol"></a>
+            <nav role="navigation" style="transition: all; transform: translateY(0px) translateX(0px);"
+                class="navigation">
+
+
+                <a href="Resume.html" class="nav-link nav-p" style="max-width: 1004px;">Resume</a>
+                <a href="about.html" class="nav-link nav-p middle-link" style="max-width: 1004px;">About</a>
+
+                <a href="projects.html" class="nav-link nav-p" style="max-width: 1004px;">Projects</a>
+
+
+
+            </nav>
+        </section>
+        <section class="herosection">
+            <div class="mycontain hero-pad">
+                <div class="hero-part1">
+                    <h2 class="hero-h2">Hi, I'm</h2>
+                    <img class="shine" src="shine.png">
+                    <h1 class="hero-h1">ANDRE CABROL</h1>
+                </div>
+
+
+                <div class="hero-part2">
+                    <img src="andre.png" class="hero-andre" alt="photo of André">
+                    <div>
+                        <h3 class="hero-home-h3">Student and Class representative</h3>
+                        <p class="hero-p">I'm currently a student in <a href="https://www.tudublin.ie/"
+                                class="hero-p-a">TUD
+                                Grangergorman</a> doing a course in
+                            Computer
+                            Science
+                            (TU856). I have a keen interest in front and back
+                            end web development. </p>
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/andre-cabrol-11784b262/" data-tooltip="Instagram"
+                            class="hero-social"><img src="linkedin.png" class="hero-social" alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com/andrecabrol/" class="hero-social"><img src="instagram.png"
+                                class="hero-social" alt="Instagram"></a>
+                        <a href="https://vsco.co/andrecabrol" class="hero-social"><img src="vsco (2).png"
+                                class="hero-social" alt="Vsco"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div>
+            <hr>
+        </div>
+        <div class="ft-content">
+
+            <div class="ftbox">
+                <h3 class="ft-h3">Email</h3>
+                <p>Click Me! ↓</p>
+                <p id="copyMe"><b>andree.caabrol@gmail.com</b></p>
+                <span id="copyStatus" style="display:none; color: green; margin-left:8px;">
+                    Copied!
+                </span>
+
+            </div>
+            <div class="ftbox">
+                <h3 class="ft-h3">Github</h3>
+                <a href="" alt="Github link"><img src="github.png" class="ft-social" alt="github logo"></a>
+            </div>
+            <div class="ftbox">
+                <p class="rights">&copy; 2026 by Andre Cabrol. All rights reserved.</p>
+            </div>
+        </div>
+
+
+
+    </footer>
+
+    <script>
+        const p = document.getElementById("copyMe");
+        const status = document.getElementById("copyStatus");
+
+        p.addEventListener("click", async () => {
+            const text = p.textContent;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                // show message
+                status.style.display = "inline";
+                status.textContent = "Copied!";
+                // hide after 2 seconds
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 2000);
+            } catch (err) {
+                console.error("Failed to copy:", err);
+                status.style.display = "inline";
+                status.style.color = "red";
+                status.textContent = "Copy failed";
+                setTimeout(() => {
+                    status.style.display = "none";
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+
+</html>
