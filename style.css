@@ -55,27 +55,38 @@
  }
 
  .nameLogo {
-
      float: left;
      position: relative;
+     display: inline-flex;
+     align-items: center;
+     gap: 0.5rem;
      text-decoration: none;
-     width: 152px;
-     height: 24px;
-     padding-left: 10px;
+ }
+
+ .nameLogo img {
+     width: 52px;
+     height: auto;
+     transition: transform 0.5s ease;
+ }
+
+ .nameLogo h2 {
+     margin: 0;
+ }
+
+ .nameLogo:hover img {
+     transform: rotate(15deg);
  }
 
  .nav-p {
      text-align: center;
-
  }
 
  .nav-link {
      padding: 10px 15px;
      text-decoration: none;
      border-right: 2px solid #6e6e6e;
-     /* Vertical line */
-
-
+     transition: color 0.3s ease, transform 0.3s ease;
+     transform-origin: center;
  }
 
  .nav-link:last-child {
@@ -84,7 +95,7 @@
 
  .nav-link:hover {
      color: rgb(63, 137, 142);
-     transition: transform 0.5s ea
+     transform: scale(1.2);
  }
 
 
@@ -140,13 +151,14 @@
  .hero-social img {
      width: 60px;
      border-radius: 50%;
-     transition: transform 0.5s ease;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
      position: relative;
  }
 
 
- .hero-social:hover {
+ .hero-social:hover img {
      transform: translateX(5px);
+     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
  }
 
  /* .hero-social::after {
@@ -173,7 +185,7 @@
  .ft-social {
      width: 45px;
      border-radius: 50%;
-     transition: transform 0.5s ease;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
  }
 
  .ft-content {
@@ -189,6 +201,7 @@
 
  .ft-social:hover {
      transform: translateY(-5px);
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
  }
 
  .rights {
