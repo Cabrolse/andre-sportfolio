@@ -192,34 +192,19 @@
 
  .hero-social:hover img {
      transform: translateX(5px);
-     box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
  }
-
- /* .hero-social::after {
-     content: attr(data-tooltip);
-     position: absolute;
-     bottom: 120%;
-     left: 50%;
-     transform: translateX(-50%);
-     background: #333;
-     color: white;
-     padding: 5px 10px;
-     border-radius: 4px;
-     opacity: 0;
-     transition: opacity 0.3s;
-     white-space: nowrap;
-     pointer-events: none;
- }
-
- .hero-social:hover::after {
-     opacity: 1;
- } */
 
  /* footer */
  .ft-social {
      width: 45px;
      border-radius: 50%;
      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
  }
 
  .ft-content {
@@ -248,6 +233,7 @@
      flex: 1 1 220px;
     min-width: 200px;
  }
+
 
 .ft-h3 li {
     list-style: none;
