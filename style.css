@@ -278,13 +278,18 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
 
  /* hero of my projects page! */
 
+ .pgproject {
+    height: 100vh;
+ }
+
  .constr-box {
      margin: 0;
      /* remove default margins */
-     height: 100vh;
-     /* full viewport height */
+     padding-top: 40px;
+     padding-bottom: 10px;
+    /* full viewport height */
      display: flex;
-     justify-content: center;
+     justify-content: left;
      /* horizontal center */
      align-items: center;
      /* vertical center */
@@ -307,6 +312,29 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
 
  .space-res {
      padding: clamp(50px, 10vw, 300px);
+ }
+
+.project-card {
+    display: flex;
+   border-radius: 1px white solid;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px;
+    padding: 20px;
+}
+.org {
+    color:grey;
+    font-size: 12px;
+}
+.project-card-content {
+    flex: 1;
+    padding: 20px;
+}
+
+ .project-card-img {
+      max-width: 450px;
+      border-radius: 10px;
  }
 
  /* RESPONSIVE DESIGN - TABLET & MOBILE */

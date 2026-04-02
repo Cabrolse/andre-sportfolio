@@ -86,32 +86,7 @@
 
     </footer>
 
-    <script>
-        const p = document.getElementById("copyMe");
-        const status = document.getElementById("copyStatus");
-
-        p.addEventListener("click", async () => {
-            const text = p.textContent;
-
-            try {
-                await navigator.clipboard.writeText(text);
-                // show message
-                status.style.display = "inline";
-                status.textContent = "Copied!";
-                // hide after 2 seconds
-                setTimeout(() => {
-                    status.style.display = "none";
-                }, 2000);
-            } catch (err) {
-                console.error("Failed to copy:", err);
-                status.style.display = "inline";
-                status.style.color = "red";
-                status.textContent = "Copy failed";
-                setTimeout(() => {
-                    status.style.display = "none";
-                }, 2000);
-            }
-        });
+    <script src="script.js">    
     </script>
 </body>
 
