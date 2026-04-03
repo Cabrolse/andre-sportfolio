@@ -148,6 +148,8 @@
      width: clamp(150px, 40vw, 300px);
      height: auto;
      max-width: 100%;
+     animation: pop 1.5s ease;
+        
  }
 
     .hero-andre:hover {
@@ -163,26 +165,38 @@
 
  .hero-h2 {
      font-size: clamp(28px, 6vw, 50px);
+     opacity: 0;
+     animation: fadeInUp 1s ease;
+     animation-fill-mode: forwards;
+     animation-delay: 0.9s;
  }
 
  .hero-h1 {
      font-size: clamp(48px, 12vw, 90px);
      font-weight: 800;
+     opacity: 0;
+     animation: fadeIndown 1s ease;
+     animation-fill-mode: forwards;
  }
 
  .hero-home-h3 {
      font-size: clamp(18px, 5vw, 30px);
+     animation: fadeinRight 1s ease;
  }
 
  .hero-p {
      font-size: clamp(14px, 4vw, 22px);
+     opacity: 0;
+     animation: fadeinRight 1s ease;
+     animation-fill-mode: forwards;
+     animation-delay: 0.5s;
+
  }
 
  .hero-part2 {
      display: flex;
      align-items: center;
      gap: 2rem;
-     /* flex-wrap: wrap; */
  }
 
  .hero-social img {
@@ -192,6 +206,24 @@
      position: relative;
  }
 
+ .social1 {
+        opacity: 0;
+     animation: fadeinRight 1s ease;
+     animation-fill-mode: forwards;
+     animation-delay: 0.7s;
+ }
+    .social2 {
+           opacity: 0;
+     animation: fadeinRight 1s ease;
+     animation-fill-mode: forwards;
+     animation-delay: 0.9s;
+    }
+    .social3 {
+            opacity: 0;
+     animation: fadeinRight 1s ease;
+     animation-fill-mode: forwards;
+     animation-delay: 1.1s;
+    }
 
  .hero-social:hover img {
      transform: translateX(5px);
@@ -260,6 +292,9 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
      align-items: center;
      text-align: center;
      padding: clamp(40px, 10vw, 110px) 0;
+     animation: fadepop 1.5s ease;
+      animation-fill-mode: forwards;
+        animation-delay: 0.2s;
  }
 
  .cv {
@@ -293,6 +328,11 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
      /* horizontal center */
      align-items: center;
      /* vertical center */
+     opacity: 0;
+     animation: fadeInUp 0.8s ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.2s;
+      background-color: var(--background-color);
  }
 
 
@@ -430,34 +470,6 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
          flex: 1 1 100%;
          text-align: center;
      }
-
-     .h1-about {
-         font-size: clamp(28px, 7vw, 50px);
-         padding-left: 0;
-         text-align: center;
-     }
-
-     .about-content {
-         flex-direction: column;
-         padding: 15px;
-     }
-
-     .about-img {
-         max-width: 100%;
-         width: 100%;
-     }
-
-     .about-content2 {
-         flex-direction: column;
-         margin-top: 15px;
-         padding: 15px;
-     }
-
-     .about-img2 {
-         width: 100%;
-         max-width: 100%;
-     }
-
      .cv {
          width: clamp(100px, 40vw, 180px);
      }
@@ -465,6 +477,11 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
      .constr-box {
          height: 60vh;
      }
+ }
+ .project-card {
+    opacity: 0;
+     animation: fadeIndown 1s ease;
+     animation-fill-mode: forwards;
  }
 
  /* Mobile Phones (480px and below) */
@@ -666,6 +683,7 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
          font-size: 14px;
          padding: 3px 6px;
      }
+
  }
 
  /* Extra small devices (under 360px) */
@@ -698,4 +716,65 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral glow */
      .h1-about {
          font-size: 22px;
      }
+ }
+
+ @keyframes  pop {
+     0% {
+         transform: scale(0.5);
+     }
+     50% {
+         transform: scale(1.1);
+     }
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ @keyframes fadepop {
+     0% {
+         opacity: 0;
+         transform: scale(0.2);
+     }
+     50% {
+         opacity: 0.8;
+         transform: scale(1.1);
+     }
+     100% {
+         opacity: 1;
+         transform: scale(1);
+     }
+ }
+
+
+ @keyframes fadeinRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+ }
+
+ @keyframes fadeIndown {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+ }
+
+ @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
  }
