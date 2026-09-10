@@ -233,8 +233,6 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
      flex: 1 1 220px;
     min-width: 200px;
  }
-
-
 .ft-h3 li {
     list-style: none;
 }
@@ -259,10 +257,8 @@ box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
  }
 
  .cv:hover {
-     box-shadow:
-         0 0 15px rgba(63, 137, 142, 0.6),
-         0 0 30px rgba(0, 255, 255, 0.4),
-         0 0 45px rgba(0, 255, 255, 0.2);
+         box-shadow: 0 12px 24px rgba(255, 127, 80, 0.77); /* Soft coral glow */
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
      transform: translateY(-5px);
  }
 
