@@ -32,13 +32,16 @@ h2 {
   color: var(--dblue);
 }
 
-h3 {
+h3,
+label {
   font-family: "open sans";
   color: var(--dblue);
 }
 
 p,
-a {
+a,
+
+button {
   font-family: "space mono";
   color: var(--dblue);
 }
@@ -128,7 +131,7 @@ a {
 
 .mycontain {
   padding-top: 70px;
-  padding-bottom: 96px;
+  padding-bottom: 50px;
 }
 
 /* hero of my main page! */
@@ -145,7 +148,8 @@ a {
 }
 
 .hero-andre:hover {
-  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45); /* Soft coral */
+  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.45);
+  /* Soft coral */
   transform: scale(1.05);
 }
 
@@ -205,12 +209,14 @@ a {
   animation-fill-mode: forwards;
   animation-delay: 0.7s;
 }
+
 .social2 {
   opacity: 0;
   animation: fadeinRight 1s ease;
   animation-fill-mode: forwards;
   animation-delay: 0.9s;
 }
+
 .social3 {
   opacity: 0;
   animation: fadeinRight 1s ease;
@@ -220,7 +226,8 @@ a {
 
 .hero-social:hover img {
   transform: translateX(5px);
-  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
+  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3);
+  /* Soft coral glow */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -239,7 +246,8 @@ a {
 
 .ft-social:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3); /* Soft coral glow */
+  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.3);
+  /* Soft coral glow */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -251,7 +259,6 @@ a {
   gap: clamp(1rem, 5vw, 2.5rem);
   margin: 0 auto;
   max-width: 1100px;
-  text-align: left;
   margin-bottom: 2.5rem;
   padding: 0 1rem;
 }
@@ -265,12 +272,46 @@ a {
 }
 
 .ftbox {
-  flex: 1 1 200px;
-  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
 }
+
+.email-c {
+  text-align: center;
+}
+
+.contact-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-lbl {
+  font-weight: 600;
+}
+
+.cta-button-2 {
+  margin: 10px;
+  padding: 5px 0px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: var(--dblue);
+  border: 2px solid;
+  opacity: 1;
+  color: white;
+}
+
 .ft-h3 li {
   list-style: none;
 }
+
+textarea {
+  border-radius: 10px;
+}
+
 .footer-bottom {
   font-size: small;
   font-weight: 100;
@@ -281,7 +322,6 @@ a {
 .hero-res {
   align-items: center;
   text-align: center;
-  padding: clamp(40px, 10vw, 110px) 0;
   animation: fadepop 1.5s ease;
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
@@ -296,10 +336,17 @@ a {
     box-shadow 0.3s ease,
     transform 0.5s ease;
   animation: wiggle 2s infinite;
+
 }
 
+.cv-page {
+  padding: 140px 0;
+}
+
+
 .cv:hover {
-  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.77); /* Soft coral glow */
+  box-shadow: 0 12px 24px rgba(255, 127, 80, 0.77);
+  /* Soft coral glow */
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateY(-5px);
 }
@@ -356,10 +403,12 @@ a {
   gap: 20px;
   padding: 20px;
 }
+
 .org {
   color: grey;
   font-size: 12px;
 }
+
 .project-card-content {
   flex: 1;
   padding: 20px;
@@ -463,6 +512,7 @@ a {
     flex: 1 1 100%;
     text-align: center;
   }
+
   .cv {
     width: clamp(100px, 40vw, 180px);
   }
@@ -471,6 +521,7 @@ a {
     height: 60vh;
   }
 }
+
 .project-card {
   opacity: 0;
   animation: fadeIndown 1s ease;
@@ -714,9 +765,11 @@ a {
   0% {
     transform: scale(0.5);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -727,10 +780,12 @@ a {
     opacity: 0;
     transform: scale(0.2);
   }
+
   50% {
     opacity: 0.8;
     transform: scale(1.1);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -742,6 +797,7 @@ a {
     opacity: 0;
     transform: translateX(100px);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -753,6 +809,7 @@ a {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -764,6 +821,7 @@ a {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -771,22 +829,28 @@ a {
 }
 
 @keyframes wiggle {
+
   0%,
   100% {
     transform: rotate(0deg);
   }
+
   5% {
     transform: rotate(-4deg);
   }
+
   10% {
     transform: rotate(4deg);
   }
+
   15% {
     transform: rotate(-3deg);
   }
+
   20% {
     transform: rotate(3deg);
   }
+
   25% {
     transform: rotate(0deg);
   }
