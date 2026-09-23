@@ -17,21 +17,21 @@
     <link rel="icon" href="nameLogo.png" type="image/png">
     <script src="https://kit.fontawesome.com/720de92e9b.js" crossorigin="anonymous"></script>
 </head>
-    <link rel="icon" href="nameLogo.png" type="image/png">
+<link rel="icon" href="/images/nameLogo.png" type="image/png">
 </head>
 
 <body>
     <div class="coverpg">
         <section class="navsection">
             <a href="index.html" class="nameLogo">
-                <img src="nameLogo.png" alt="André Cabrol">
+                <img src="/images/nameLogo.png" alt="André Cabrol">
                 <h2>Andre Cabrol</h2>
             </a>
             <nav role="navigation" style="transition: all; transform: translateY(0px) translateX(0px);"
                 class="navigation">
 
 
-                <a href="Resume.html" class="nav-link nav-p" style="max-width: 1004px;">Resume</a>
+                <a href="Andre-Cabrol.pdf" class="nav-link nav-p" style="max-width: 1004px;">Resume</a>
                 <a href="projects.html" class="nav-link nav-p" style="max-width: 1004px;">Projects</a>
 
 
@@ -47,7 +47,8 @@
 
 
                 <div class="hero-part2">
-                    <img src="andre.png" class="hero-andre" alt="photo of André">
+                    <img src="/images/profile_photo.JPG" class="hero-andre" alt="photo of André">
+
                     <div>
                         <h3 class="hero-home-h3">Student and Class representative</h3>
                         <p class="hero-p">I'm currently a student in TUDublin doing a course in Computer Science
@@ -56,15 +57,27 @@
                     </div>
                     <div>
                         <a href="https://www.linkedin.com/in/andre-cabrol-11784b262/" data-tooltip="Instagram"
-                            class="hero-social "><img src="linkedin.png" class="hero-social social1" alt="LinkedIn"></a>
-                        <a href="https://www.instagram.com/andrecabrol/" class="hero-social"><img src="instagram.png"
-                                class="hero-social social2" alt="Instagram"></a>
-                        <a href="https://vsco.co/andrecabrol" class="hero-social"><img src="vsco (2).png"
+                            class="hero-social "><img src="/images/linkedin.png" class="hero-social social1"
+                                alt="LinkedIn"></a>
+                        <a href="https://www.instagram.com/andrecabrol/" class="hero-social"><img
+                                src="/images/instagram.png" class="hero-social social2" alt="Instagram"></a>
+                        <a href="https://vsco.co/andrecabrol" class="hero-social"><img src="/images/vsco.png"
                                 class="hero-social social3" alt="Vsco"></a>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="coverpg">
+            <div class="hero-res">
+                <div>
+                    <h3 class="">Resume</h3>
+                    <p>find my CV here ↓</p>
+                </div>
+                <div class="cv-page">
+                    <a href="Andre-Cabrol.pdf"><img class="cv" src="/images/cv-cover.png" alt="CV link"></a>
+                </div>
+            </div>
+        </div>
     </div>
     <footer>
         <div>
@@ -75,36 +88,43 @@
             <div class="ft-box">
                 <h3 class="ft-h3">Quick Links</h3>
                 <ul>
-                    <li class="qlink"><a href="index.html" >Home</a></li>
+                    <li class="qlink"><a href="index.html">Home</a></li>
                     <li class="qlink"><a href="projects.html">Projects</a></li>
-                    <li class="qlink"><a href="Resume.html" >Resume</a></li>
+                    <li class="qlink"><a href="Resume.html">Resume</a></li>
                 </ul>
             </div>
-            <div class="ft-box">
+            <div class="ft-box email-c">
                 <h3 class="ft-h3">Contact Me</h3>
                 <a href="mailto:lorbac.erdna@gmail.com" target="_blank">
-                <i class="fa-c fa-solid fa-envelope"></i></a>
-                            <a class="email-c" href="mailto:lorbac.erdna@gmail.com" target="_blank">
-                            
-                            <p>lorbac.erdna@gmail.com</p>
-                        </a>
-                    
+                    <p><i class="fa-c fa-solid fa-envelope"></i> lorbac.erdna@gmail.com</p>
+                </a>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <label class="contact-lbl" for="message">Say Hi!</label>
+                    <textarea placeholder="Your Message" name="message" rows="5" onclick="makeBlue(this)"
+                        onblur="resetBorder(this)" required></textarea>
+                    <button type="submit" class="cta-button-2">Send Message <i class="fa-regular fa-paper-plane"
+                            style="color: rgb(255, 255, 255);"></i></button>
+                </form>
+
+
+
             </div>
-            <div class="ft-box">
+            <div class="ft-box emai">
                 <h3 class="ft-h3">Check Me Out!</h3>
-                 <a href="https://github.com/Cabrolse" alt="Github link"><img src="github.png" class="ft-social" alt="github logo"></a>
+                <a href="https://github.com/Cabrolse" alt="Github link"><img src="/images/github.png" class="ft-social"
+                        alt="github logo"></a>
             </div>
         </div>
-                <hr>
-<div class="footer-bottom">
-    <p>&copy; 2026 by Andre Cabrol. All rights reserved.</p>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2026 by Andre Cabrol. All rights reserved.</p>
 
-</div>
+        </div>
 
 
     </footer>
 
- <script src="script.js">    
+    <script src="script.js">
     </script>
 </body>
 
