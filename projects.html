@@ -14,14 +14,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="/images/nameLogo.png" type="image/png">
+    <link rel="icon" href="images/nameLogo.png" type="image/png">
     <script src="https://kit.fontawesome.com/720de92e9b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <section class="navsection">
         <a href="index.html" class="nameLogo">
-            <img src="/images/nameLogo.png" alt="André Cabrol">
+            <img src="images/nameLogo.png" alt="André Cabrol">
             <h2>Andre Cabrol</h2>
         </a>
         <nav role="navigation" style="transition: all; transform: translateY(0px) translateX(0px);" class="navigation">
@@ -42,18 +42,20 @@
         <div class="project-card">
             <div class="project-card-content">
                 <p class="org">TUD Enactus</p>
-            <h3>University society website</h3>
-            <p>A responsive website for the university's Enactus club, featuring project.</p>
+                <h3>University society website</h3>
+                <p>A responsive website for the university's Enactus club, featuring project.</p>
             </div>
-            <a href=""><img class="project-card-img" src="/images/enactus-project-img.png" alt=""></a>
+            <a href=""><img class="project-card-img" src="images/enactus-project-img.png" alt=""></a>
         </div>
         <div class="project-card">
             <div class="project-card-content">
                 <p class="org">CS50 Harvard</p>
-            <h3>Completed the CS50 Introduction to Python course</h3>
-            <p>I took part in a 9 week long online course for Python where I had to solve numerous problems and I had to complete and sumbit a final project which included a 10 minute video of myself</p>
+                <h3>Completed the CS50 Introduction to Python course</h3>
+                <p>I took part in a 9 week long online course for Python where I had to solve numerous problems and I
+                    had to complete and sumbit a final project which included a 3 minute video of myself going through
+                    my final project</p>
             </div>
-            <a href=""><img class="project-card-img" src="enactus-project-img.png" alt=""></a>
+            <a href=""><img class="project-card-img" src="images/" alt=""></a>
         </div>
     </div>
     <footer>
@@ -65,36 +67,43 @@
             <div class="ft-box">
                 <h3 class="ft-h3">Quick Links</h3>
                 <ul>
-                    <li class="qlink"><a href="index.html" >Home</a></li>
+                    <li class="qlink"><a href="index.html">Home</a></li>
                     <li class="qlink"><a href="projects.html">Projects</a></li>
-                    <li class="qlink"><a href="Andre-Cabrol.pdf" >Resume</a></li>
-                    
+                    <li class="qlink"><a href="Resume.html">Resume</a></li>
+                </ul>
             </div>
-            <div class="ft-box">
+            <div class="ft-box email-c">
                 <h3 class="ft-h3">Contact Me</h3>
                 <a href="mailto:lorbac.erdna@gmail.com" target="_blank">
-                <i class="fa-c fa-solid fa-envelope"></i></a>
-                            <a class="email-c" href="mailto:lorbac.erdna@gmail.com" target="_blank">
-                            
-                            <p>lorbac.erdna@gmail.com</p>
-                        </a>
-                    
+                    <p><i class="fa-c fa-solid fa-envelope"></i> lorbac.erdna@gmail.com</p>
+                </a>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <label class="contact-lbl" for="message">Say Hi!</label>
+                    <textarea placeholder="Your Message" name="message" rows="5" onclick="makeBlue(this)"
+                        onblur="resetBorder(this)" required></textarea>
+                    <button type="submit" class="cta-button-2">Send Message <i class="fa-regular fa-paper-plane"
+                            style="color: rgb(255, 255, 255);"></i></button>
+                </form>
+
+
+
             </div>
-            <div class="ft-box">
+            <div class="ft-box emai">
                 <h3 class="ft-h3">Check Me Out!</h3>
-                 <a href="https://github.com/Cabrolse" alt="Github link"><img src="github.png" class="ft-social" alt="github logo"></a>
+                <a href="https://github.com/Cabrolse" alt="Github link"><img src="images/github.png" class="ft-social"
+                        alt="github logo"></a>
             </div>
         </div>
-                <hr>
-<div class="footer-bottom">
-    <p>&copy; 2026 by Andre Cabrol. All rights reserved.</p>
+        <hr>
+        <div class="footer-bottom">
+            <p>&copy; 2026 by Andre Cabrol. All rights reserved.</p>
 
-</div>
+        </div>
 
 
     </footer>
 
- <script src="script.js">    
+    <script src="script.js">
     </script>
 </body>
 
