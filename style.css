@@ -354,18 +354,14 @@ textarea {
 /* hero of my projects page! */
 
 .pgproject {
-  height: 100vh;
+  padding: 1rem 0 4rem;
 }
 
 .constr-box {
   margin: 0;
-  /* remove default margins */
-  padding-top: 40px;
-  padding-bottom: 10px;
-  /* full viewport height */
+  padding: 1.5rem 0 1rem;
   display: flex;
   justify-content: left;
-
   align-items: center;
 
   opacity: 0;
@@ -394,14 +390,16 @@ textarea {
 
 .project-card {
   display: flex;
-  border-radius: 1px white solid;
-
+  align-items: center;
+  border: 1px solid rgba(26, 58, 74, 0.12);
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   gap: 20px;
   padding: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .org {
@@ -410,16 +408,48 @@ textarea {
 }
 
 .project-card-content {
-  flex: 1;
+  flex: 1 1 0;
   padding: 20px;
+  min-width: 0;
+}
+
+.project-card>a {
+  flex: 0 1 45%;
+  min-width: 0;
 }
 
 .project-card-img {
+  display: block;
+  width: 100%;
   max-width: 450px;
+  height: auto;
   border-radius: 10px;
 }
 
-/* RESPONSIVE DESIGN - TABLET & MOBILE */
+/* RESPONSIVE DESIGN FOR TABLET & MOBILE */
+
+/* Keep project cards stacked until there is enough room for the image. */
+@media (max-width: 900px) {
+  .project-card {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .project-card-content {
+    padding: 0.75rem;
+  }
+
+  .project-card-img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .project-card>a {
+    flex-basis: auto;
+  }
+}
 
 /* Tablets (768px and below) */
 @media (max-width: 768px) {
@@ -518,8 +548,9 @@ textarea {
   }
 
   .constr-box {
-    height: 60vh;
+    padding-top: 1rem;
   }
+
 }
 
 .project-card {
@@ -649,60 +680,6 @@ textarea {
     margin-top: 10px;
   }
 
-  .h1-about {
-    font-size: clamp(24px, 6vw, 36px);
-    padding-left: 0;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-
-  .about-hero-pt1 {
-    padding-top: 20px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    padding: 10px;
-    gap: 0.5rem;
-  }
-
-  .about-img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about-text {
-    font-size: 13px;
-    width: 100%;
-  }
-
-  .about-content2 {
-    flex-direction: column;
-    margin-top: 10px;
-    padding: 10px;
-    gap: 0.5rem;
-  }
-
-  .about-content2 img {
-    padding: 5px;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .about-content2 p {
-    padding: 5px;
-  }
-
-  .about-text2 {
-    font-size: 13px;
-    width: 100%;
-  }
-
-  .about-img2 {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .space {
     padding: clamp(30px, 5vw, 80px);
   }
@@ -720,12 +697,34 @@ textarea {
   }
 
   .constr-box {
-    height: 50vh;
+    padding: 0.75rem 0 1rem;
   }
 
   .h3-constr {
     font-size: 14px;
     padding: 3px 6px;
+  }
+
+  .pgproject {
+    padding-bottom: 2rem;
+  }
+
+  .project-card {
+    gap: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-card-content {
+    padding: 0.5rem;
+  }
+
+  .project-card-content h3 {
+    line-height: 1.35;
+  }
+
+  .project-card-content p {
+    line-height: 1.5;
   }
 }
 
