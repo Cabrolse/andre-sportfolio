@@ -98,10 +98,13 @@
                 <a href="mailto:lorbac.erdna@gmail.com" target="_blank">
                     <p><i class="fa-c fa-solid fa-envelope"></i> lorbac.erdna@gmail.com</p>
                 </a>
-                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <label class="contact-lbl" for="message">Say Hi!</label>
-                    <textarea placeholder="Your Message" name="message" rows="5" onclick="makeBlue(this)"
-                        onblur="resetBorder(this)" required></textarea>
+
+                <form class="contact-form" action="https://send.webforms.to/wft_jjjt4yd97hhkkgtuuwcm" method="POST">
+                    <label placeholder="Your Name or Orginization" class="contact-lbl" for="message">Say Hi!</label>
+                    <input placeholder="Your Email" class="text" type="text" name="name" required />
+                    <input placeholder="Your Message" class="text" type="email" name="email" required />
+
+                    <textarea placeholder="Your Message" class="text" name="message" rows="4" required></textarea>
                     <button type="submit" class="cta-button-2">Send Message <i class="fa-regular fa-paper-plane"
                             style="color: rgb(255, 255, 255);"></i></button>
                 </form>
